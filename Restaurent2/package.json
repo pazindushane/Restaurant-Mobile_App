@@ -10,10 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "native-base": "^3.2.2",
     "react": "17.0.2",
+    "react-icons": "^4.3.1",
     "react-native": "0.66.3",
     "react-native-elements": "^3.4.2",
     "react-native-paper": "^4.10.1",

@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
 import SignUpScreen from './SignUpScreen';
+import TabNavScreen from '../SubScreens/TabNavScreen';
 
 export default class LoginScreen extends Component {
 
   SignScreenNav =()=> {
     this.props.navigation.navigate(SignUpScreen)
   }
+
+  TabScreenNav =()=> {
+    this.props.navigation.navigate(TabNavScreen)
+  }
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -44,7 +51,7 @@ export default class LoginScreen extends Component {
       placeholder="Password"
       
     />
-    <Button style={styles.btn11} mode="contained" onPress={this.LoginScreenNav}>
+    <Button style={styles.btn11} mode="contained" onPress={this.TabScreenNav}>
           <Text style={styles.btn21}>Sign In</Text>
         </Button>
         <Text style={styles.txt8}>Don't have an account ? <TouchableOpacity
