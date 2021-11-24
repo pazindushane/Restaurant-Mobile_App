@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@horizonlime/react-native-select-multiple": "^1.1.2",
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
@@ -17,10 +18,13 @@
     "react": "17.0.2",
     "react-icons": "^4.3.1",
     "react-native": "0.66.3",
+    "react-native-bouncy-checkbox": "^2.1.7",
+    "react-native-counters": "^1.2.0",
     "react-native-elements": "^3.4.2",
     "react-native-paper": "^4.10.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.9.0",
+    "react-native-selectmultiple-button": "^0.1.105",
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^9.0.0"
   },

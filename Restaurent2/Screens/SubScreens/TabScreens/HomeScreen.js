@@ -43,7 +43,7 @@ export default class HomeScreen extends Component {
         <Text style={styles.txt5}>Chicken Kottu</Text>
         <Text style={styles.txt5}>Rs.350.00</Text>
         <Text style={styles.txt6}>4.3  <AwesomeIcon style={styles.txt7}  name="star"/></Text>
-        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="cart-plus"/></TouchableOpacity>
+        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="utensils"/></TouchableOpacity>
           </Card>
           <Card style={styles.card3}>
           <Image
@@ -54,7 +54,7 @@ export default class HomeScreen extends Component {
         <Text style={styles.txt5}>Rs.250.00</Text>
         <Text style={styles.txt6}>4.5  <AwesomeIcon style={styles.txt7}  name="star"/>
         </Text>
-        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="cart-plus"/></TouchableOpacity>
+        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="utensils"/></TouchableOpacity>
           </Card>
         </View>
         <View style={styles.card11}/> 
@@ -72,7 +72,7 @@ export default class HomeScreen extends Component {
         <Text style={styles.txt5}>Chicken Rice</Text>
         <Text style={styles.txt5}>Rs.350.00</Text>
         <Text style={styles.txt6}>4.3  <AwesomeIcon style={styles.txt7}  name="star"/></Text>
-        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="cart-plus"/></TouchableOpacity>
+        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="utensils"/></TouchableOpacity>
           </Card>
           <Card style={styles.card3}>
           <Image
@@ -83,7 +83,7 @@ export default class HomeScreen extends Component {
         <Text style={styles.txt5}>Rs.250.00</Text>
         <Text style={styles.txt6}>4.5  <AwesomeIcon style={styles.txt7}  name="star"/>
         </Text>
-        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="cart-plus"/></TouchableOpacity>
+        <TouchableOpacity style={styles.btn2}><AwesomeIcon style={styles.txt8}  name="utensils"/></TouchableOpacity>
           </Card>
         </View>
         {/* </View> */}
