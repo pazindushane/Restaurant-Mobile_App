@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
-import SignUpScreen from './SignUpScreen';
+import  SignUpScreen from './SignUpScreen';
 import TabNavScreen from '../SubScreens/TabNavScreen';
 
 export default class LoginScreen extends Component {
 
-  SignScreenNav =()=> {
-    this.props.navigation.navigate(SignUpScreen)
+  SignScreenNav = () => {
+    this.props.navigation.navigate(SignUpScreen);
+    
   }
 
   TabScreenNav =()=> {

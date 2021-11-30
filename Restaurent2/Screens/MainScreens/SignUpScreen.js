@@ -1,13 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component }  from 'react';
 import { View, Text, StyleSheet, KeyboardAvoidingView, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import LoginScreen from './LoginScreen';
+import { connect } from 'react-redux';
+import { saveuser } from '../../Redux/Actions/userActions';
 
-export default class SignUpScreen extends Component {
+class SignUpScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      username:'',
+      password:'',
+      email:'',
+      contact:''
     };
+  }
+
+  saveUsers = () => {
+
+    const {username, password, email, contact } = this.state;
+
+    const infosaveuser = { username, password, email, contact};
+
+    this.props.saveuser(infosaveuser);
+
   }
 
   LoginScreenNav =()=> {
@@ -22,36 +38,64 @@ export default class SignUpScreen extends Component {
         source={require('../../Assests/coverimg.png')}
       />
         <Text style={styles.titleText}>Sign Up</Text>
-        <Text style={styles.txt7}>Full name</Text>
+        <Text style={styles.txt7}>Username</Text>
           <TextInput style={styles.txt4}
             
-            label="Full name"
-            placeholder="Full name"
+            label="Username"
+            placeholder="Username"
+            value={this.state.username}
+            name="value"
+            onChangeText={(value) => {                 
+						this.setState({
+              username: value
+                          })
+            }}
       
           />
           
-        <Text style={styles.txt71}>Email</Text>
+        <Text style={styles.txt71}>Password</Text>
           <TextInput style={styles.txt41}
-            
-            label="Email"
-            placeholder="Email"
-      
-          />
-          <Text style={styles.txt72}>Contact no</Text>
-          <TextInput style={styles.txt42}
-            
-            label="Contact no"
-            placeholder="Contact no"
-      
-          />
-          <Text style={styles.txt73}>Password</Text>
-          <TextInput style={styles.txt43}
             secureTextEntry
             label="Password"
             placeholder="Password"
+            value={this.state.password}
+            name="value"
+            onChangeText={(value) => {                 
+						this.setState({
+              password: value
+                          })
+            }}
       
           />
-          <Button style={styles.btn11} mode="contained">
+          <Text style={styles.txt72}>Email</Text>
+          <TextInput style={styles.txt42}
+            
+            label="Email"
+            placeholder="Email"
+            value={this.state.email}
+            name="value"
+            onChangeText={(value) => {                 
+						this.setState({
+              email: value
+                          })
+            }}
+      
+          />
+          <Text style={styles.txt73}>Contact</Text>
+          <TextInput style={styles.txt43}
+            
+            label="Contact"
+            placeholder="Contact"
+            value={this.state.contact}
+            name="value"
+            onChangeText={(value) => {                 
+						this.setState({
+              contact: value
+                          })
+            }}
+      
+          />
+          <Button style={styles.btn11} mode="contained" onPress={() => this.saveUsers()}>
           <Text style={styles.btn21}>Sign Up</Text>
           </Button>
           <Text style={styles.txt8}>Already have an account ? <TouchableOpacity
@@ -62,6 +106,12 @@ export default class SignUpScreen extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  users: state.users.users
+});
+
+export default connect( mapStateToProps, {saveuser})(SignUpScreen);
 
 const styles = StyleSheet.create({
   img3:{
